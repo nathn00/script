@@ -23,7 +23,7 @@ list = flatten_list()
 
 for heic in list:
     heic_base_name = os.path.basename(heic)
-    transfered_name = f'{my_name}_{str(start_num).zfill(2)}{ext_jpg}'
+    transfered_name = f'n_{my_name}_{str(start_num).zfill(2)}{ext_jpg}'
     jpg_file = os.path.join(jpg_target_dir, transfered_name)
     heif_file = pyheif.read(heic)
     img = Image.frombytes(
