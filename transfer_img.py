@@ -8,7 +8,7 @@ my_name = sys.argv[1]
 start_num = int(sys.argv[2])
 home_dir = os.path.expanduser('~')
 raw_target_dir = os.path.join(home_dir, 'Downloads') # raw images
-jpg_target_dir = os.path.join(home_dir, 'Desktop/_Dev/labelme/examples/custom') # jpg images
+jpg_target_dir = os.path.join(home_dir, 'Desktop/_dev/labelme/examples/custom') # jpg images
 heic_list = [glob.glob(e) for e in [os.path.join(raw_target_dir, '*.heic'), os.path.join(raw_target_dir, '*.HEIC')]]
 ext_jpg = '.jpg'
 
@@ -34,7 +34,7 @@ for heic in list:
       heif_file.mode,
       heif_file.stride,
     )
-    img.thumbnail((512, 512))
+    img.thumbnail((413, 531))
     img.save(f'{jpg_file}')
     start_num += 1
     print(f'{heic_base_name} ==> {os.path.basename(transfered_name)}: Transfering into 512^2 Pixel... Success!')
